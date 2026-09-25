@@ -28,7 +28,7 @@ brew uninstall --cask mew
 
 - An interactive zsh shell that uses your regular shell setup
 - Built-in `help` and `credits` commands
-- An ASCII Mew that flies through 3D space and lands in the welcome banner
+- Your animated Mew GIF played as colored ASCII; its final frame stays in the welcome banner
 - Gentle color accents and a small loading bar at startup
 
 ## First launch
