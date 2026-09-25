@@ -1,6 +1,6 @@
-# ✨ Mew
+#  Mew
 
-A little Mew-themed home for your commands. Mew is a native macOS terminal with a real interactive zsh shell, a soft purple palette, and ASCII Mew art to greet you.
+A little Mew-themed home for your commands
 
 ## Install
 
