@@ -1,25 +1,43 @@
-#  Mew
+# Mew
 
-A little Mew-themed home for your commands
+A native macOS terminal with a charcoal theme, cyan and lime accents, and a Mew portrait made from letters and punctuation. Mew's body has subtle lavender shading and blue eye details. The custom header keeps the native macOS close, minimize, and full-screen buttons. Drag the header to move the window. The welcome artwork scrolls upward with command output; scroll back to see it again, or use `clear` in zsh to start fresh with Mew at the top.
 
-## Install
+At launch, Mew plays the bundled `Sources/Mew/mew.gif` as colored ASCII frames at the GIF's own timing. The final ASCII frame stays in the terminal's scrollback as the shell appears; there is no second portrait or morph at the end.
 
-Mew currently supports **Apple silicon Macs** running **macOS 14 Sonoma or later**.
+Each window starts a persistent interactive login shell in a pseudo-terminal. Shell configuration and command history work normally; interactive programs, ANSI colors, terminal resizing, scrollback, keyboard input, and copy/paste are handled by SwiftTerm. In zsh, Mew leaves one blank line before each prompt after the first. `help` opens Mew's command guide, `help <command>` opens a manual page, and `credits` prints “built by abel with love”.
 
-```sh
-brew install --cask importkaizen/mew/mew
-```
+Rendering uses Metal when available, with an automatic CoreGraphics fallback. SwiftTerm's immediate local-input redraw path and cached GPU rows keep typing responsive. A continuously visible custom caret follows SwiftTerm's real cursor updates: it glides after typing, slides back on deletion, and fades to its new line when a command is entered. Each transition has a short motion blur; no typed characters are drawn by the effect. Remote shell response time still depends on the connection. Text is echoed by the real shell, preserving password entry, shortcuts, and interactive applications.
 
-Then open **Mew** from Applications or Spotlight.
+## Everyday tools
 
-## Keep it up to date
+- **Shell profiles** save a profile name, shell executable, starting folder, and optional startup command. Selecting a profile opens a fresh shell session. Press **⌘⇧P** to manage profiles.
+- **Searchable history** searches recent commands from `~/.zsh_history` (or `~/.bash_history`) as you type. Choose a result to put it on the prompt for review, then press Return to run it. Press **⌘⇧H**.
+- **Command palette** searches Mew actions, including profiles, history, clear, and a fresh session. Press **⌘⇧K**.
 
-```sh
-brew upgrade --cask mew
-```
+## Run
 
-To remove Mew:
+Requirements: macOS 14 or later and Apple's Swift command line tools. The first build downloads SwiftTerm from GitHub.
 
 ```sh
-brew uninstall --cask mew
+cd "/Users/abela/mew"
+mkdir -p .build/module-cache
+CLANG_MODULE_CACHE_PATH="$PWD/.build/module-cache" \
+SWIFTPM_MODULECACHE_OVERRIDE="$PWD/.build/module-cache" \
+swift run
 ```
+
+To create a clickable app bundle with the colored ASCII Mew icon in `build/Mew.app`:
+
+```sh
+./package-app.sh
+```
+
+The app icon is generated from the same portrait and colors in `Sources/Mew/MewAppearance.swift` each time you package the app. The PNG and ICNS files are saved in `Assets/`.
+
+Each window has its own shell session. Closing the window ends its shell. Mew uses the shell listed in your `SHELL` environment variable, falling back to `/bin/zsh` when no shell is configured.
+
+## Share with friends
+
+Run `./package-share.sh` on your Mac. It rebuilds Mew and creates a ZIP in `dist/`. Upload that ZIP to a file-sharing service or a release page. Friends can download it, unzip it, and move `Mew.app` to Applications.
+
+The current release is for Apple silicon Macs running macOS 14 or later. This build is not signed with a Developer ID or notarized, so macOS may show a security warning after download. Someone who trusts the copy they received can try opening it once, then use **System Settings → Privacy & Security → Open Anyway** if macOS offers that option. For a smoother public download, sign Mew with a Developer ID certificate and notarize it with Apple. Full Disk Access is granted separately by each Mac owner; it cannot be bundled into the download.
