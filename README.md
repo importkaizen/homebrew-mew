@@ -13,6 +13,11 @@ Rendering uses Metal when available, with an automatic CoreGraphics fallback. Sw
 - **Shell profiles** save a profile name, shell executable, starting folder, and optional startup command. Selecting a profile opens a fresh shell session. Press **⌘⇧P** to manage profiles.
 - **Searchable history** searches recent commands from `~/.zsh_history` (or `~/.bash_history`) as you type. Choose a result to put it on the prompt for review, then press Return to run it. Press **⌘⇧H**.
 - **Command palette** searches Mew actions, including profiles, history, clear, and a fresh session. Press **⌘⇧K**.
+- **Focus Mode** hides the Mew header and tab strip for a terminal-only workspace. Toggle it with **⌘⇧F**.
+- **Tabs** keep multiple shell sessions open; press **⌘T** or use the **+** button. Switching tabs preserves each shell and its scrollback.
+- **Split terminals** run two shells side by side or stacked. Use the split menu at the right end of the tab strip; choose **Close Split** to return to one pane.
+- **Settings** (⌘,) include five color presets, custom background and accent colors, Menlo/Monaco/SF Mono/Courier fonts, and imported TTF, OTF, TTC, or OTC fonts. Imported font files are kept in Mew's Application Support folder and remain available after restarting. Text size and bar/block/underline carets are customizable too; changes update open panes and are saved on this Mac.
+- **Editable shortcuts** live in Settings → Keyboard shortcuts. Click a shortcut and press a key combination with ⌘, ⌥, or ⌃ to change it.
 
 ## Run
 
