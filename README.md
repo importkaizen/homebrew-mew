@@ -29,7 +29,6 @@ Open **Mew** from Applications or Spotlight. The Homebrew cask installs the curr
 | Feature | What it does |
 | --- | --- |
 | Real shell sessions | Runs your configured shell with normal command execution, history, ANSI output, and interactive programs. |
-| Animated ASCII welcome | Plays the Mew animation at launch; the portrait stays in scrollback and returns to the top after `clear` in zsh. |
 | Tabs and split panes | Keeps independent shell sessions open. Split right or down, drag the divider to resize, and click a pane to type in it. |
 | Profiles | Saves a shell executable, starting folder, and optional startup command. |
 | History and suggestions | Searches your shell history and offers inline command suggestions that you can turn off. |
@@ -94,4 +93,9 @@ The versioned app archives are in [`dist/`](dist/). Each release's SHA-256 value
 
 Found a bug? [Open an issue](https://github.com/importkaizen/homebrew-mew/issues) with your Mew version, macOS version, installation method, what you expected, what happened, and steps to reproduce it. Include the exact error message or a crash report when relevant, with personal details removed.
 
-Mew was built by Abel with love. Terminal emulation is provided by [SwiftTerm](https://github.com/migueldeicaza/SwiftTerm).
+
+
+
+
+built with love
+built with love
