@@ -15,7 +15,8 @@ Rendering uses Metal when available, with an automatic CoreGraphics fallback. Sw
 - **Command palette** searches Mew actions, including profiles, history, clear, and a fresh session. Press **⌘⇧K**.
 - **Focus Mode** hides the Mew header and tab strip for a terminal-only workspace. Toggle it with **⌘⇧F**.
 - **Tabs** keep multiple shell sessions open; press **⌘T** or use the **+** button. Switching tabs preserves each shell and its scrollback.
-- **Split terminals** run two shells side by side or stacked. Use the split menu at the right end of the tab strip; choose **Close Split** to return to one pane.
+- **Split terminals** run two shells side by side or stacked. Click either pane to send typing to that shell; each pane keeps its own live session. Use the split menu at the right end of the tab strip; choose **Close Split** to return to one pane.
+- **Clickable links and paths** open web links in your default browser and existing file paths in their default app when clicked in terminal output. Relative paths resolve from the shell's current folder.
 - **Settings** (⌘,) include five color presets, custom background and accent colors, Menlo/Monaco/SF Mono/Courier fonts, and imported TTF, OTF, TTC, or OTC fonts. Imported font files are kept in Mew's Application Support folder and remain available after restarting. Text size and bar/block/underline carets are customizable too; changes update open panes and are saved on this Mac.
 - **Editable shortcuts** live in Settings → Keyboard shortcuts. Click a shortcut and press a key combination with ⌘, ⌥, or ⌃ to change it.
 
