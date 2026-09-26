@@ -4,7 +4,7 @@
 
 <h1 align="center">Mew</h1>
 
-<p align="center">A native macOS terminal with a real shell, an animated ASCII welcome, and a workspace you can make your own.</p>
+<p align="center">A native macOS terminal, and a workspace you can make your own.</p>
 
 <p align="center"><strong>Apple silicon · macOS 14 or later · Homebrew distribution</strong></p>
 
