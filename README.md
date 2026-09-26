@@ -98,4 +98,3 @@ Found a bug? [Open an issue](https://github.com/importkaizen/homebrew-mew/issues
 
 
 built with love
-built with love
