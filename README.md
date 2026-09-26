@@ -1,49 +1,97 @@
-# Mew
+<p align="center">
+  <img src="docs/mew-icon.png" width="104" alt="Mew app icon">
+</p>
 
-A native macOS terminal with a charcoal theme, cyan and lime accents, and a Mew portrait made from letters and punctuation. Mew's body has subtle lavender shading and blue eye details. The custom header keeps the native macOS close, minimize, and full-screen buttons. Drag the header to move the window. The welcome artwork scrolls upward with command output; scroll back to see it again, or use `clear` in zsh to start fresh with Mew at the top.
+<h1 align="center">Mew</h1>
 
-At launch, Mew plays the bundled `Sources/Mew/mew.gif` as colored ASCII frames at the GIF's own timing. The final ASCII frame stays in the terminal's scrollback as the shell appears; there is no second portrait or morph at the end.
+<p align="center">A native macOS terminal with a real shell, an animated ASCII welcome, and a workspace you can make your own.</p>
 
-Each window starts a persistent interactive login shell in a pseudo-terminal. Shell configuration and command history work normally; interactive programs, ANSI colors, terminal resizing, scrollback, keyboard input, and copy/paste are handled by SwiftTerm. In zsh, Mew leaves one blank line before each prompt after the first. `help` opens Mew's command guide, `help <command>` opens a manual page, and `credits` prints “built by abel with love”.
+<p align="center"><strong>Apple silicon · macOS 14 or later · Homebrew distribution</strong></p>
 
-Rendering uses Metal when available, with an automatic CoreGraphics fallback. SwiftTerm's immediate local-input redraw path and cached GPU rows keep typing responsive. A continuously visible custom caret follows SwiftTerm's real cursor updates: it glides after typing, slides back on deletion, and fades to its new line when a command is entered. Each transition has a short motion blur; no typed characters are drawn by the effect. Remote shell response time still depends on the connection. Text is echoed by the real shell, preserving password entry, shortcuts, and interactive applications.
+Mew runs your interactive shell in a pseudoterminal. Your usual commands, aliases, shell configuration, and interactive programs work alongside tabs, split panes, searchable history, and appearance controls.
 
-## Everyday tools
+## Install
 
-- **Shell profiles** save a profile name, shell executable, starting folder, and optional startup command. Selecting a profile opens a fresh shell session. Press **⌘⇧P** to manage profiles.
-- **Searchable history** searches recent commands from `~/.zsh_history` (or `~/.bash_history`) as you type. Choose a result to put it on the prompt for review, then press Return to run it. Press **⌘⇧H**.
-- **Command palette** searches Mew actions, including profiles, history, clear, and a fresh session. Press **⌘⇧K**.
-- **Focus Mode** hides the Mew header and tab strip for a terminal-only workspace. Toggle it with **⌘⇧F**.
-- **Tabs** keep multiple shell sessions open; press **⌘T** or use the **+** button. Switching tabs preserves each shell and its scrollback.
-- **Split terminals** run two shells side by side or stacked. Click either pane to send typing to that shell; each pane keeps its own live session. Use the split menu at the right end of the tab strip; choose **Close Split** to return to one pane.
-- **Clickable links and paths** open web links in your default browser and existing file paths in their default app when clicked in terminal output. Relative paths resolve from the shell's current folder.
-- **Settings** (⌘,) include five color presets, custom background and accent colors, Menlo/Monaco/SF Mono/Courier fonts, and imported TTF, OTF, TTC, or OTC fonts. Imported font files are kept in Mew's Application Support folder and remain available after restarting. Text size and bar/block/underline carets are customizable too; changes update open panes and are saved on this Mac.
-- **Editable shortcuts** live in Settings → Keyboard shortcuts. Click a shortcut and press a key combination with ⌘, ⌥, or ⌃ to change it.
-
-## Run
-
-Requirements: macOS 14 or later and Apple's Swift command line tools. The first build downloads SwiftTerm from GitHub.
+On an Apple silicon Mac running **macOS 14 Sonoma or later**, install Mew with [Homebrew](https://brew.sh/):
 
 ```sh
-cd "/Users/abela/mew"
-mkdir -p .build/module-cache
-CLANG_MODULE_CACHE_PATH="$PWD/.build/module-cache" \
-SWIFTPM_MODULECACHE_OVERRIDE="$PWD/.build/module-cache" \
-swift run
+brew install --cask importkaizen/mew/mew
 ```
 
-To create a clickable app bundle with the colored ASCII Mew icon in `build/Mew.app`:
+Open **Mew** from Applications or Spotlight. The Homebrew cask installs the current Apple silicon build and checks its SHA-256 hash against [the cask definition](Casks/mew.rb).
+
+### Download without Homebrew
+
+[Download the current macOS ZIP](https://raw.githubusercontent.com/importkaizen/homebrew-mew/main/dist/Mew-0.1.7-macOS-AppleSilicon.zip), extract it, and move `Mew.app` to Applications. Manual installations are updated by replacing the app with a newer ZIP from this repository.
+
+## What Mew includes
+
+| Feature | What it does |
+| --- | --- |
+| Real shell sessions | Runs your configured shell with normal command execution, history, ANSI output, and interactive programs. |
+| Animated ASCII welcome | Plays the Mew animation at launch; the portrait stays in scrollback and returns to the top after `clear` in zsh. |
+| Tabs and split panes | Keeps independent shell sessions open. Split right or down, drag the divider to resize, and click a pane to type in it. |
+| Profiles | Saves a shell executable, starting folder, and optional startup command. |
+| History and suggestions | Searches your shell history and offers inline command suggestions that you can turn off. |
+| Command palette and Focus Mode | Finds Mew actions quickly, or hides the header and tabs when you want only the terminal. |
+| Appearance settings | Offers five themes, editable colors, caret styles, text sizes, and built-in or imported fonts. |
+| Clickable output | Opens URLs and existing file paths from terminal output. |
+
+Open **Settings** with **⌘,** to customize Mew or change its keyboard shortcuts.
+
+## Quick reference
+
+The default zsh session includes these commands:
+
+| Command | Action |
+| --- | --- |
+| `help` | Show Mew's guide to commands and features. |
+| `help <command>` | Open that command's manual page. |
+| `credits` | Show the creator credit. |
+| `clear` | Clear output and bring the Mew portrait back to the top. |
+
+Default keyboard shortcuts:
+
+| Shortcut | Action |
+| --- | --- |
+| **⌘T** | New tab |
+| **⌘⇧P** | Shell profiles |
+| **⌘⇧H** | Search history |
+| **⌘⇧K** | Command palette |
+| **⌘,** | Settings |
+| **⌘⇧F** | Toggle Focus Mode |
+| **⌃⌥Space** | Toggle command suggestions |
+
+Press **→** to accept an inline suggestion. Shortcuts can be edited in **Settings → Keyboard shortcuts**.
+
+## Update or remove
 
 ```sh
-./package-app.sh
+brew update
+brew upgrade --cask mew
 ```
 
-The app icon is generated from the same portrait and colors in `Sources/Mew/MewAppearance.swift` each time you package the app. The PNG and ICNS files are saved in `Assets/`.
+To remove the Homebrew installation:
 
-Each window has its own shell session. Closing the window ends its shell. Mew uses the shell listed in your `SHELL` environment variable, falling back to `/bin/zsh` when no shell is configured.
+```sh
+brew uninstall --cask mew
+```
 
-## Share with friends
+If Homebrew reports that Mew is current but the app still shows an older version, quit Mew and run `brew reinstall --cask mew`. Then open the copy in **/Applications**; an older Dock shortcut or manually installed copy may point elsewhere. You can compare Homebrew's version with the app bundle:
 
-Run `./package-share.sh` on your Mac. It rebuilds Mew and creates a ZIP in `dist/`. Upload that ZIP to a file-sharing service or a release page. Friends can download it, unzip it, and move `Mew.app` to Applications.
+```sh
+brew info --cask mew
+/usr/libexec/PlistBuddy -c 'Print :CFBundleShortVersionString' /Applications/Mew.app/Contents/Info.plist
+```
 
-The current release is for Apple silicon Macs running macOS 14 or later. This build is not signed with a Developer ID or notarized, so macOS may show a security warning after download. Someone who trusts the copy they received can try opening it once, then use **System Settings → Privacy & Security → Open Anyway** if macOS offers that option. For a smoother public download, sign Mew with a Developer ID certificate and notarize it with Apple. Full Disk Access is granted separately by each Mac owner; it cannot be bundled into the download.
+## First launch and release integrity
+
+The current build is **ad hoc signed and not Apple notarized**. macOS may ask you to approve it before the first launch. After trying to open Mew, follow [Apple's Open Anyway instructions](https://support.apple.com/102445) if you trust the download.
+
+The versioned app archives are in [`dist/`](dist/). Each release's SHA-256 value is recorded in [`Casks/mew.rb`](Casks/mew.rb); Homebrew verifies that hash during installation. This repository contains the Homebrew cask and packaged macOS builds.
+
+## Support
+
+Found a bug? [Open an issue](https://github.com/importkaizen/homebrew-mew/issues) with your Mew version, macOS version, installation method, what you expected, what happened, and steps to reproduce it. Include the exact error message or a crash report when relevant, with personal details removed.
+
+Mew was built by Abel with love. Terminal emulation is provided by [SwiftTerm](https://github.com/migueldeicaza/SwiftTerm).
