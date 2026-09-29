@@ -1,0 +1,34 @@
+<?xml version="1.0" standalone="yes"?>
+<!-- sparkle-sign-warning:
+IMPORTANT: This file was signed by Sparkle. Any modifications to this file requires re-signing this file with generate_appcast or sign_update! The signed signature will be embedded at the end of this file.
+-->
+<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
+    <channel>
+        <title>Mew</title>
+        <item>
+            <title>0.1.9</title>
+            <pubDate>Tue, 29 Sep 2026 15:21:00 -0400</pubDate>
+            <sparkle:version>10</sparkle:version>
+            <sparkle:shortVersionString>0.1.9</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <enclosure url="https://raw.githubusercontent.com/importkaizen/homebrew-mew/main/dist/updates/Mew-0.1.9-macOS-AppleSilicon.zip" length="2955600" type="application/octet-stream" sparkle:edSignature="EdfOHYc0YdEgg4rahVyWsMHO6SbFNgVN6g/FtsgnPQTdxtTzucjpsxJyEzG9khp/TZkZmqbnYmlwkNHpV+tlDg=="/>
+            <sparkle:deltas>
+                <enclosure url="https://raw.githubusercontent.com/importkaizen/homebrew-mew/main/dist/updates/Mew10-9.delta" sparkle:deltaFrom="9" length="1446" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="941872" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="1rfyIQaGGnVY5nNg8t3nRK6J+UOunH5oitMTzKPS9KmBvVsxfRnTK1xA0H1ERGSs7vIndPmY2pkh72vPzCSnDA=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
+            <title>0.1.8</title>
+            <pubDate>Tue, 29 Sep 2026 15:16:02 -0400</pubDate>
+            <sparkle:version>9</sparkle:version>
+            <sparkle:shortVersionString>0.1.8</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <enclosure url="https://raw.githubusercontent.com/importkaizen/homebrew-mew/main/dist/updates/Mew-0.1.8-macOS-AppleSilicon.zip" length="2955600" type="application/octet-stream" sparkle:edSignature="pjgF6apk/Kq2t0lHVPuoGNjUsF7EcLPZlHyd304hdo1L/IsygSEXk/xeQ+V+reubG6CkjIrfL5zvxuHB/gDeCg=="/>
+        </item>
+    </channel>
+</rss>
+<!-- sparkle-signatures:
+edSignature: HxqxoDk38LAyD3WsQShrXMAFU0p2Yo4fOhRtbzuSLatBbUr3zgHyOBpWH1o3Kp5wk7xPqMvcL2TUQcj7ouWIDQ==
+length: 2316
+-->

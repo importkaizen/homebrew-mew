@@ -22,7 +22,7 @@ Open **Mew** from Applications or Spotlight. The Homebrew cask installs the curr
 
 ### Download without Homebrew
 
-[Download the current macOS ZIP](https://raw.githubusercontent.com/importkaizen/homebrew-mew/main/dist/Mew-0.1.7-macOS-AppleSilicon.zip), extract it, and move `Mew.app` to Applications. Manual installations are updated by replacing the app with a newer ZIP from this repository.
+[Download the current macOS ZIP](https://raw.githubusercontent.com/importkaizen/homebrew-mew/main/dist/Mew-0.1.9-macOS-AppleSilicon.zip), extract it, and move `Mew.app` to Applications. Mew checks its signed update feed automatically and installs downloaded releases when you quit. Use **Mew → Check for Updates…** to check immediately. Versions earlier than 0.1.9 need this one-time manual replacement before automatic updates are available.
 
 ## What Mew includes
 
@@ -65,6 +65,8 @@ Press **→** to accept an inline suggestion. Shortcuts can be edited in **Setti
 
 ## Update or remove
 
+Mew checks for signed updates about once an hour, downloads them automatically, and installs them when you quit. You can trigger a check from **Mew → Check for Updates…**. The feed and versioned updater archives are published in [`dist/updates/`](dist/updates/); automatic updates become available once the matching signed appcast and ZIP are pushed to this repository.
+
 ```sh
 brew update
 brew upgrade --cask mew
@@ -85,7 +87,7 @@ brew info --cask mew
 
 ## First launch and release integrity
 
-The current build is **ad hoc signed and not Apple notarized**. macOS may ask you to approve it before the first launch. After trying to open Mew, follow [Apple's Open Anyway instructions](https://support.apple.com/102445) if you trust the download.
+The current build is **ad hoc signed and not Apple notarized**. macOS may ask you to approve it before the first launch. After trying to open Mew, follow [Apple's Open Anyway instructions](https://support.apple.com/102445) if you trust the download. Sparkle verifies the signed appcast and update archive before applying an update.
 
 The versioned app archives are in [`dist/`](dist/). Each release's SHA-256 value is recorded in [`Casks/mew.rb`](Casks/mew.rb); Homebrew verifies that hash during installation. This repository contains the Homebrew cask and packaged macOS builds.
 
