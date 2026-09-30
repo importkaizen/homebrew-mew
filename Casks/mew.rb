@@ -1,6 +1,6 @@
 cask "mew" do
-  version "0.1.9"
-  sha256 "c5ef759d38fb5c5597c955de178d88f6e6de96f1eacee749fe6a2af78ddad785"
+  version "0.1.10"
+  sha256 "1233355c844f1fa1133bfe243124abc1c0889588751a656c1ce824f813f5bb6a"
 
   url "https://raw.githubusercontent.com/importkaizen/homebrew-mew/main/dist/Mew-#{version}-macOS-AppleSilicon.zip"
   name "Mew"

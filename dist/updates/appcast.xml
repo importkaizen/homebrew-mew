@@ -6,6 +6,19 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
     <channel>
         <title>Mew</title>
         <item>
+            <title>0.1.10</title>
+            <pubDate>Wed, 30 Sep 2026 02:11:04 -0400</pubDate>
+            <sparkle:version>11</sparkle:version>
+            <sparkle:shortVersionString>0.1.10</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <enclosure url="https://raw.githubusercontent.com/importkaizen/homebrew-mew/main/dist/updates/Mew-0.1.10-macOS-AppleSilicon.zip" length="2967207" type="application/octet-stream" sparkle:edSignature="vRM5XhIcnzAZhCeJVIzrztGviM+ct8mb+g2C4dA+KwsBe9ehLASVccg2aie/ot1MSsqGbhqboFlShsF6aU1NAw=="/>
+            <sparkle:deltas>
+                <enclosure url="https://raw.githubusercontent.com/importkaizen/homebrew-mew/main/dist/updates/Mew11-10.delta" sparkle:deltaFrom="10" length="197810" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="941872" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="qgQEoGyOStLgwK8ITAetktrmNGs1sWBlmg+1MWTswR7lOu44t8jB6fbwHyag/j4HZc/JDbsHD8U1IX4VwLeWDA=="/>
+                <enclosure url="https://raw.githubusercontent.com/importkaizen/homebrew-mew/main/dist/updates/Mew11-9.delta" sparkle:deltaFrom="9" length="198234" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="941872" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="nIaw+0gBMcRFohyBs91mBDRV6rhQ4WBAl+RgGeEQGIMFX1EFSj+Ul/kdSO1NSeMmNKqjvp0+e4FyLZcHUe53BQ=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
             <title>0.1.9</title>
             <pubDate>Tue, 29 Sep 2026 15:21:00 -0400</pubDate>
             <sparkle:version>10</sparkle:version>
@@ -29,6 +42,6 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
     </channel>
 </rss>
 <!-- sparkle-signatures:
-edSignature: HxqxoDk38LAyD3WsQShrXMAFU0p2Yo4fOhRtbzuSLatBbUr3zgHyOBpWH1o3Kp5wk7xPqMvcL2TUQcj7ouWIDQ==
-length: 2316
+edSignature: VAA/H3/puu+siHX546QO2KGIo7O9Vt3aPebrFJ4ixk0NZyGFjU86Gufp/ql33VUkDqygI6ql6pjk05Ln19pAAA==
+length: 3913
 -->
