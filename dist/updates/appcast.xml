@@ -6,6 +6,20 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
     <channel>
         <title>Mew</title>
         <item>
+            <title>0.1.11</title>
+            <pubDate>Sat, 03 Oct 2026 18:35:36 -0400</pubDate>
+            <sparkle:version>12</sparkle:version>
+            <sparkle:shortVersionString>0.1.11</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <enclosure url="https://raw.githubusercontent.com/importkaizen/homebrew-mew/main/dist/updates/Mew-0.1.11-macOS-AppleSilicon.zip" length="2967473" type="application/octet-stream" sparkle:edSignature="qSqKm/z0SiqNEcIqiuLhvbcmROMWg95rUCz5f+Xnc6WPTzz86lee4RACzFJCUglphJzqnPWhULrZm2cW0L4LAg=="/>
+            <sparkle:deltas>
+                <enclosure url="https://raw.githubusercontent.com/importkaizen/homebrew-mew/main/dist/updates/Mew12-11.delta" sparkle:deltaFrom="11" length="82826" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="941872" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="Wj7+OtawcshGWczlR72PN/upjw9xgsjRZgNKxs8hfVRS6PuroTbMHCfM188K1uZXqpGsQN/jv4/BCpXwYTHyBA=="/>
+                <enclosure url="https://raw.githubusercontent.com/importkaizen/homebrew-mew/main/dist/updates/Mew12-10.delta" sparkle:deltaFrom="10" length="193622" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="941872" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="oXd1udXKuQklyII2ZQtOjPqx04Zr2UXukdAh5PovBiZUvl3uPnDcBDnPY15eytegEOP6siprU702qBUxjzJoCA=="/>
+                <enclosure url="https://raw.githubusercontent.com/importkaizen/homebrew-mew/main/dist/updates/Mew12-9.delta" sparkle:deltaFrom="9" length="192226" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="941872" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="ruvLyJuKMZGvRSvGU/MpjlajCddsSXSO0vkY+VBRJiu7qGE2l8peRPOXQ/rGagfT8V34GJvMxiU1tlLxjqB/CQ=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
             <title>0.1.10</title>
             <pubDate>Wed, 30 Sep 2026 02:11:04 -0400</pubDate>
             <sparkle:version>11</sparkle:version>
@@ -30,18 +44,9 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
                 <enclosure url="https://raw.githubusercontent.com/importkaizen/homebrew-mew/main/dist/updates/Mew10-9.delta" sparkle:deltaFrom="9" length="1446" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="941872" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="1rfyIQaGGnVY5nNg8t3nRK6J+UOunH5oitMTzKPS9KmBvVsxfRnTK1xA0H1ERGSs7vIndPmY2pkh72vPzCSnDA=="/>
             </sparkle:deltas>
         </item>
-        <item>
-            <title>0.1.8</title>
-            <pubDate>Tue, 29 Sep 2026 15:16:02 -0400</pubDate>
-            <sparkle:version>9</sparkle:version>
-            <sparkle:shortVersionString>0.1.8</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <enclosure url="https://raw.githubusercontent.com/importkaizen/homebrew-mew/main/dist/updates/Mew-0.1.8-macOS-AppleSilicon.zip" length="2955600" type="application/octet-stream" sparkle:edSignature="pjgF6apk/Kq2t0lHVPuoGNjUsF7EcLPZlHyd304hdo1L/IsygSEXk/xeQ+V+reubG6CkjIrfL5zvxuHB/gDeCg=="/>
-        </item>
     </channel>
 </rss>
 <!-- sparkle-signatures:
-edSignature: VAA/H3/puu+siHX546QO2KGIo7O9Vt3aPebrFJ4ixk0NZyGFjU86Gufp/ql33VUkDqygI6ql6pjk05Ln19pAAA==
-length: 3913
+edSignature: 8iTFc3zT+oK42PiI7znc56RW1yShxHdZ15+tRgr42sPq2dQCqbcK/4OOmb0BN5nvqXKDAF0h9WY6nNs04I+8BA==
+length: 5212
 -->
