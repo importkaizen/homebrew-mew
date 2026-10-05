@@ -22,7 +22,7 @@ Open **Mew** from Applications or Spotlight. The Homebrew cask installs the curr
 
 ### Download without Homebrew
 
-[Download the current macOS ZIP](https://raw.githubusercontent.com/importkaizen/homebrew-mew/main/dist/Mew-0.1.11-macOS-AppleSilicon.zip), extract it, and move `Mew.app` to Applications. Mew checks its signed update feed automatically and installs downloaded releases when you quit. Use **Mew → Check for Updates…** to check immediately. Versions earlier than 0.1.9 need this one-time manual replacement before automatic updates are available.
+[Download the current macOS ZIP](https://raw.githubusercontent.com/importkaizen/homebrew-mew/main/dist/Mew-0.1.12-macOS-AppleSilicon.zip), extract it, and move `Mew.app` to Applications. Mew checks its signed update feed automatically and installs downloaded releases when you quit. Use **Mew → Check for Updates…** to check immediately. Versions earlier than 0.1.9 need this one-time manual replacement before automatic updates are available.
 
 ## What Mew includes
 
